@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/eye07.unity
+  isLoaded: 1
+  isActive: 1
