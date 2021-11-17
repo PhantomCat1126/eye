@@ -26,49 +26,78 @@ public class UIButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print ("isON："+isON+"，isOFF："+isOFF);
+		
 
-		if (isON == true) {
-			isOFF = false;
-			for (int i = 0; i < EyeObject.Length; i++) {
-				EyeObject [i].transform.position = Vector3.Lerp (EyeObject [i].transform.position, ExplosionPosition [i].transform.position, Time.deltaTime * smooth);
-				if (EyeObject [i].transform.position == ExplosionPosition [i].transform.position) {
-					btn_off.SetActive (true);
-					isExplosion = true;
-					isON = false;
-				}
-			}
-		}
+
+
+
+		//if (isON == true) {
+		//	isOFF = false;
+		//	for (int i = 0; i < EyeObject.Length; i++) {
+		//		EyeObject [i].transform.position = Vector3.Lerp (EyeObject [i].transform.position, ExplosionPosition [i].transform.position, Time.deltaTime * smooth);
+		//		if (EyeObject [i].transform.position == ExplosionPosition [i].transform.position) {
+		//			btn_off.SetActive (true);
+		//			isExplosion = true;
+		//			isON = false;
+		//		}
+		//	}
+		//}
 			
 		if (isExplosion == true)
 			btn_on.SetActive (false);
 
-		if (isOFF == true) {
-			for (int i = 0; i < EyeObject.Length; i++) {
-				EyeObject [i].transform.position = Vector3.Lerp (EyeObject [i].transform.position, OriginalPosition [i].transform.position, Time.deltaTime * smooth);
-				if (EyeObject [i].transform.position == OriginalPosition [i].transform.position) {
-					isExplosion = false;
-					btn_off.SetActive (false);
-					btn_on.SetActive (true);
+		//if (isOFF == true) {
+		//	for (int i = 0; i < EyeObject.Length; i++) {
+		//		EyeObject [i].transform.position = Vector3.Lerp (EyeObject [i].transform.position, OriginalPosition [i].transform.position, Time.deltaTime * smooth);
+		//		if (EyeObject [i].transform.position == OriginalPosition [i].transform.position) {
+		//			isExplosion = false;
+		//			btn_off.SetActive (false);
+		//			btn_on.SetActive (true);
 
-				}
-			}
-		}
-
-
+		//		}
+		//	}
+		//}
 	}
+
+
+
 
 	public void ON() 
 	{
 		isON = true;
+		isOFF = false;
+		print("isON：" + isON + "，isOFF：" + isOFF);
+		for (int i = 0; i < EyeObject.Length; i++)
+		{
+			EyeObject[i].transform.position = Vector3.Lerp(EyeObject[i].transform.position, ExplosionPosition[i].transform.position, Time.deltaTime * smooth);
+			if (EyeObject[i].transform.position == ExplosionPosition[i].transform.position)
+			{
+				btn_off.SetActive(true);
+				isExplosion = true;
+				isON = false;
+			
+			}
+		}
+	
 	}
 
 	public void OFF() 
 	{
 		isOFF = true;
+		print("isON：" + isON + "，isOFF：" + isOFF);
+		for (int i = 0; i < EyeObject.Length; i++)
+		{
+			EyeObject[i].transform.position = Vector3.Lerp(EyeObject[i].transform.position, OriginalPosition[i].transform.position, Time.deltaTime * smooth);
+			if (EyeObject[i].transform.position == OriginalPosition[i].transform.position)
+			{
+				isExplosion = false;
+				btn_off.SetActive(false);
+				btn_on.SetActive(true);
+				
+			}
+		}
+		
 	}
-
-
 
 
 	public void AdjustlocalScale(float newlocalScale) 

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eye", "Assembly-CSharp-firstpass.csproj", "{808F18AD-F2F7-F700-D600-AA2E43A30B9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{808F18AD-F2F7-F700-D600-AA2E43A30B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eye", "Assembly-CSharp.csproj", "{86575A21-0BF9-C159-7A51-0C4A095CE953}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{86575A21-0BF9-C159-7A51-0C4A095CE953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eye", "Assembly-CSharp-Editor-firstpass.csproj", "{EE00AC77-27B0-7E5A-EEAC-F1B59527AE9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{EE00AC77-27B0-7E5A-EEAC-F1B59527AE9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
